@@ -1,0 +1,308 @@
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      #contact_us,
+      #about,
+      #suggestions {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        border: 2px outset black;
+        background-color: white;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        border-radius: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Registration Form</h1>
+    <div class="div1">
+      <h2 id="WelMsg">Welcome to the website, Registration Starts Here...</h2>
+      <p id="Welpara">
+        Let's start now, just try to fill in the details carefully and
+        correctly.<br /><br />
+        <b>NOTE:-</b>Please enter a password that is at least 8 characters long.
+      </p>
+    </div>
+    <form action="contact_us1.html" id="registrationForm">
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input type="text" placeholder="Name" name="" />
+          </td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td>
+          <td>
+            <input type="phone" placeholder="9867******" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email Id:</td>
+          <td>
+            <input type="email" placeholder="example1@*8" />
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            <input type="password" placeholder="Password" />
+          </td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <input type="radio" name="gender" />Male
+            <input type="radio" name="gender" />Female
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Birth:</td>
+          <td>
+            <input type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td>Hobbies:</td>
+          <td>
+            <input type="checkbox" singing />Singing
+            <input type="checkbox" Dancing />Dancing
+            <input type="checkbox" playing />Sports
+          </td>
+        </tr>
+        <tr>
+          <td>Education Qualification:</td>
+          <td>
+            <select>
+              <option>Select Option</option>
+              <option>10+2</option>
+              <option>Graduation</option>
+              <option>Postgraduation</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>
+            <textarea rows="5" col="17" placeholder="Address"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <h3>
+      By clicking submit, you agree to our terms of service and privacy policy.
+    </h3>
+    <p>
+      After registering please check your email for a confirmation message.<br /><br />
+      Already a registered user? <a href="#">Click here</a>
+    </p>
+    <br />
+    <p id="p1"><strong>FEEDBACK-FORM</strong></p>
+    <div>
+      <form action="feedback.html" id="feedbackForm">
+        <label for="question"
+          >If you're facing any problem please write to us.We'll solve the issue
+          at the earliest.</label
+        ><br />
+        <br />
+        <br />
+        <input
+          class="feedBackForm"
+          id="answer"
+          name="feedback"
+          placeholder="Text"
+          size="100"
+          style="height: 100px"
+          type="text"
+          value=""
+        /><br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <br />
+    <p id="p2"><strong>SPA BUTTON</strong></p>
+    <p>
+      <a
+        href="javascript:void(0)"
+        id="historyPush"
+        onclick="history.pushState(null, 'test', 'spa/1.html')"
+        >SPA URL</a
+      >
+    </p>
+    <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
+      >Change hash</a
+    >
+    <p></p>
+    <button id="clickonlinkDummy">ClickElement</button>
+    <button id="testelement2">ClickElement2</button>
+    <button id="testelement3">ClickElement3</button>
+    <button id="testelement4">ClickElement4</button>
+
+    <p>
+      <br />
+      <br />
+      <a href="suggestions.html" id="suggestions">Suggestions</a><br />
+      <br />
+      <br />
+      <br />
+      <a href="contact_us.html" id="contact_us">Contact us</a><br />
+      <br />
+      <br />
+      <br />
+      <a href="about.html" id="about">About</a>
+
+      <br />
+      <br />
+      <br />
+    </p>
+
+    <div style="height: 30px"></div>
+    <a id="dynamicLink"></a>
+    <p>
+      <button onclick="myFunction()">Generate Link</button>
+      <input id="input" />
+      <script>
+        function myFunction() {
+          document.getElementById("dynamicLink").innerHTML = "GENERATED LINK";
+          document.getElementById("dynamicLink").href =
+            document.getElementById("input").value;
+          //   location.href=document.getElementById("input").value;
+        }
+      </script>
+    </p>
+    <!-- Start VWO Async SmartCode -->
+    <script type="text/javascript" id="vwoCode">
+      window._vwo_code =
+        window._vwo_code ||
+        (function () {
+          var account_id = location.search.split("id=")[1]
+              ? location.search.split("id=")[1]
+              : "678166",
+            version = 1.4,
+            settings_tolerance = 2000,
+            library_tolerance = 2500,
+            use_existing_jquery = false,
+            is_spa = 1,
+            hide_element = "body",
+            /* DO NOT EDIT BELOW THIS LINE */
+            f = false,
+            d = document,
+            vwoCodeEl = document.querySelector("#vwoCode"),
+            code = {
+              use_existing_jquery: function () {
+                return use_existing_jquery;
+              },
+              library_tolerance: function () {
+                return library_tolerance;
+              },
+              finish: function () {
+                if (!f) {
+                  f = true;
+                  var e = d.getElementById("_vis_opt_path_hides");
+                  if (e) e.parentNode.removeChild(e);
+                }
+              },
+              finished: function () {
+                return f;
+              },
+              load: function (e) {
+                var t = d.createElement("script");
+                t.fetchPriority = "high";
+                t.src = e;
+                t.type = "text/javascript";
+                t.innerText;
+                t.onerror = function () {
+                  _vwo_code.finish();
+                };
+                d.getElementsByTagName("head")[0].appendChild(t);
+              },
+              getVersion: function () {
+                return version;
+              },
+              getMatchedCookies: function (e) {
+                var t = [];
+                if (document.cookie) {
+                  t = document.cookie.match(e) || [];
+                }
+                return t;
+              },
+              getCombinationCookie: function () {
+                var e = code.getMatchedCookies(
+                  /(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi
+                );
+                e = e.map(function (e) {
+                  try {
+                    var t = decodeURIComponent(e);
+                    if (!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)) {
+                      return "";
+                    }
+                    return t;
+                  } catch (e) {
+                    return "";
+                  }
+                });
+                var i = [];
+                e.forEach(function (e) {
+                  var t = e.match(/([\d,]+)/g);
+                  t && i.push(t.join("-"));
+                });
+                return i.join("|");
+              },
+              init: function () {
+                window.settings_timer = setTimeout(function () {
+                  _vwo_code.finish();
+                }, settings_tolerance);
+                var e = d.createElement("style"),
+                  t = hide_element
+                    ? hide_element +
+                      "{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}"
+                    : "",
+                  i = d.getElementsByTagName("head")[0];
+                e.setAttribute("id", "_vis_opt_path_hides");
+                vwoCodeEl && e.setAttribute("nonce", vwoCodeEl.nonce);
+                e.setAttribute("type", "text/css");
+                if (e.styleSheet) e.styleSheet.cssText = t;
+                else e.appendChild(d.createTextNode(t));
+                i.appendChild(e);
+                var n = this.getCombinationCookie();
+                this.load(
+                  "https://dev.visualwebsiteoptimizer.com/j.php?a=" +
+                    account_id +
+                    "&u=" +
+                    encodeURIComponent(d.URL) +
+                    "&f=" +
+                    +is_spa +
+                    "&vn=" +
+                    version +
+                    (n ? "&c=" + n : "")
+                );
+                return settings_timer;
+              },
+            };
+          window._vwo_settings_timer = code.init();
+          return code;
+        })();
+      _vwo_pc_custom = {
+        a: 100,
+        t: 100,
+      };
+    </script>
+    <!-- End VWO Async SmartCode -->
+  </body>
+</html>
