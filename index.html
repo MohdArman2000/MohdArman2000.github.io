@@ -183,14 +183,9 @@ window._vwo_pc_custom = {
     </div>
     <br />
     <p id="p2"><strong>SPA BUTTON</strong></p>
-    <p>
-      <a
-        href="javascript:void(0)"
-        id="historyPush"
-        onclick="history.pushState(null, 'test', 'spa/1.html')"
-        >SPA URL</a
-      >
-    </p>
+    <button onclick="historyPushUrl()">SPA URL</button>
+    <br/>
+    <br/>
     <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
       >Change hash</a
     >
@@ -232,5 +227,15 @@ window._vwo_pc_custom = {
         }
       </script>
     </p>
+    <script>
+        let spaCount = 1;
+
+        function historyPushUrl() {
+            const url = new URL(window.location);
+            url.searchParams.set('spa', spaCount);
+            window.history.pushState({}, '', url);
+            spaCount++;
+        }
+    </script>
   </body>
 </html>
