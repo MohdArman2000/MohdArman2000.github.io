@@ -190,6 +190,9 @@ window._vwo_pc_custom = {
     <button onclick="historyPushUrl()">SPA URL</button>
     <br/>
     <br/>
+    <button onclick="spaNavigation()">SPA Navigation</button>
+    <br/>
+    <br/>
     <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
       >Change hash</a
     >
@@ -240,6 +243,12 @@ window._vwo_pc_custom = {
             window.history.pushState({}, '', url);
             spaCount++;
         }
+
+        function spaNavigation()
+          {
+            history.pushState(null, null, '?query=' + Date.now());
+          }
+      
     </script>
   </body>
 </html>
