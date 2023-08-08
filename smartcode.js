@@ -1,5 +1,3 @@
-<!-- Start VWO Async SmartCode -->
-<script type='text/javascript' id='vwoCode'>
 window._vwo_code=window._vwo_code || (function() {
 var account_id=722993,
 version = 1.5,
@@ -15,5 +13,4 @@ window._vwo_pc_custom = {
     a: 100,
     t: 100
 };
-</script>
-<!-- End VWO Async SmartCode -->
+
