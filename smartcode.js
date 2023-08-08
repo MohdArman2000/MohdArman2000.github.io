@@ -1,5 +1,4 @@
 <!-- Start VWO Async SmartCode -->
-<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type='text/javascript' id='vwoCode'>
 window._vwo_code=window._vwo_code || (function() {
 var account_id=722993,
