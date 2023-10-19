@@ -31,6 +31,9 @@
 		<p id="Welpara">Let's start now, just try to fill in the details carefully and correctly.<br><br>
         <b>NOTE:-</b>Please enter a password that is at least 8 characters long.</p>
 	    </div>
+    <br/>
+	    <button onclick="historyPushUrl()">SPA URL</button>
+    <br/>
         <form action="contact_us1.html" id="registrationForm">
             <table>
                 <tr>
@@ -139,8 +142,6 @@
 	    </div>
         <br>
         <p id="p2"><strong>SPA BUTTON</strong></p>
-        <p><a href="javascript:void(0)" id="historyPush" onclick="history.pushState(null, 'test', 'spa/1.html')">SPA URL</a>
-	</p>
     <a href="javascript:void(0)" onclick="location.hash='spa/1.html'">Change hash</a>
     <p></p>
     <button id="clickonlinkDummy">ClickElement</button>
@@ -177,6 +178,15 @@
 			}
 		</script>
 	</p>
+	 <script>
+        let spaCount = 1;
 
+        function historyPushUrl() {
+            const url = new URL(window.location);
+            url.searchParams.set('spa', spaCount);
+            window.history.pushState({}, '', url);
+            spaCount++;
+        }
+	 </script>
         </body>
 </html>
