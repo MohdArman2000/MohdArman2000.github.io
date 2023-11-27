@@ -240,7 +240,8 @@ window._vwo_pc_custom = {
     <button id="testelement2">ClickElement2</button>
     <button id="testelement3">ClickElement3</button>
     <button id="testelement4">ClickElement4</button>
-
+    <button id="activateButton" onclick="activateVWO()">Activate API</button>
+    
     <p>
       <br />
       <br />
@@ -288,6 +289,10 @@ window._vwo_pc_custom = {
             history.pushState(null, null, '?query=' + Date.now());
           }
       
+    </script>
+    <script>
+      window.VWO = window.VWO || [];
+      window.VWO.push(['activate', {virtualPageUrl: 'https://mohdarman2000.github.io/'}])
     </script>
   </body>
 </html>
