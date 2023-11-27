@@ -296,5 +296,20 @@ window._vwo_pc_custom = {
       window.VWO.push(['activate', {virtualPageUrl: 'https://testing-base.vercel.app/'}])
       }
     </script>
+    <script>
+       function activateVWO() {
+        window.VWO = window.VWO || [];
+        window.VWO.push(['activate', {virtualPageUrl: 'https://testing-base.vercel.app/'}])
+        }
+
+      // Function to be executed on DOM ready
+      function onDOMReady() {
+        activateVWO();
+      }
+
+      // Attach DOMContentLoaded event listener
+      document.addEventListener('DOMContentLoaded', onDOMReady);
+    
+    </script>
   </body>
 </html>
