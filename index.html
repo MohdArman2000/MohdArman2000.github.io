@@ -297,25 +297,19 @@ window._vwo_pc_custom = {
       }
     </script>
     
-    <script>
-      
+   <script>
      function activateVWO() {
         window.VWO = window.VWO || [];
         window.VWO.push(['activate', {virtualPageUrl: 'https://testing-base.vercel.app/'}])
         }
 
-       function activateVWOAfterDelay() {
-        // Set a timeout for 5 seconds (5000 milliseconds)
-        setTimeout(activateVWO, 5000);
-    }
-     /* // Function to be executed on DOM ready
+      // Function to be executed on DOM ready
       function onDOMReady() {
-        activateVWO();
+        setTimeout(() => activateVWO(), 1500)
       }
 
       // Attach DOMContentLoaded event listener
       document.addEventListener('DOMContentLoaded', onDOMReady);
-  */
     </script>
     
   </body>
