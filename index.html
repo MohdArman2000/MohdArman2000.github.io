@@ -240,7 +240,7 @@ window._vwo_pc_custom = {
     <button id="testelement2">ClickElement2</button>
     <button id="testelement3">ClickElement3</button>
     <button id="testelement4">ClickElement4</button>
-    <button id="activateButton" onclick="activateVWO()">Activate API</button>
+    <button id="activateButton" onclick="activateVWOAfterDelay()">Activate API</button>
     
     <p>
       <br />
@@ -304,14 +304,18 @@ window._vwo_pc_custom = {
         window.VWO.push(['activate', {virtualPageUrl: 'https://testing-base.vercel.app/'}])
         }
 
-      // Function to be executed on DOM ready
+       function activateVWOAfterDelay() {
+        // Set a timeout for 5 seconds (5000 milliseconds)
+        setTimeout(activateVWO, 5000);
+    }
+     /* // Function to be executed on DOM ready
       function onDOMReady() {
         activateVWO();
       }
 
       // Attach DOMContentLoaded event listener
       document.addEventListener('DOMContentLoaded', onDOMReady);
-  
+  */
     </script>
     
   </body>
