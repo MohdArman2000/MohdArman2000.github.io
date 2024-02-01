@@ -20,9 +20,19 @@
 }
           </style>
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-         <!-- Start VWO SmartCode -->
-        <script src="https://dev.visualwebsiteoptimizer.com/lib/8000028.js" id='vwoCode'></script>
-        <!-- End VWO SmartCode -->   
+         <script>
+		document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        
+        var vwoScript = document.createElement('script');
+        
+        vwoScript.src = 'https://dev.visualwebsiteoptimizer.com/lib/8000028.js';
+        vwoScript.id = 'vwoCode';
+
+        document.head.appendChild(vwoScript);
+    }, 2000); 
+});
+	</script>
     </head>
     <body>
         <h1 style=text-align:center>Registration Form</h1>
