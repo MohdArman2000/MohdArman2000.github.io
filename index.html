@@ -47,6 +47,51 @@
         font-weight: 600;
       }
     </style>
+    <script type="text/javascript">
+        window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+        heap.load("3085617548");
+      </script>
+          <script>
+        // Define an array of names
+        var names = [
+            "Alice",
+            "Bob",
+            "Charlie",
+            "David",
+            "Eve",
+            "Frank",
+            "Grace",
+            "Hannah",
+            "Ivy",
+            "Jack",
+            "Kevin",
+            "Lily",
+            "Mike",
+            "Nancy",
+            "Oliver",
+            "Pamela",
+            "Quinn",
+            "Rachel",
+            "Sam",
+            "Tina",
+            "Ursula",
+            "Victor",
+            "Wendy",
+            "Xavier",
+            "Yolanda",
+            "Zach"
+        ];
+
+        // Function to perform heap identification
+        function identifyRandomName() {
+            // Pick a random name from the array
+            var randomIndex = Math.floor(Math.random() * names.length);
+            var randomName = names[randomIndex];
+
+            // Perform heap identification with the random name
+            heap.identify(randomName);
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript">
     window.DISABLE_NATIVE_CONSTANTS = false;
