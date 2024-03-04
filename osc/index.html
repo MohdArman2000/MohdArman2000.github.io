@@ -23,8 +23,9 @@
 	<script>const params = new URLSearchParams(window.location.search);
 const accId = parseInt(params.get("id"));
 const accountId = accId || 743063;
+const srcurl=`https://dev.visualwebsiteoptimizer.com/lib/${accountId}.js`
 console.log("Account-Id -->", accountId);</script>
-	<script referrerPolicy="no-referrer-when-downgrade" src=`https://dev.visualwebsiteoptimizer.com/lib/${accountId}.js` id="vwoCode">
+	<script referrerPolicy="no-referrer-when-downgrade" src={srcurl} id="vwoCode">
 	</script>
     </head>
     <body>
