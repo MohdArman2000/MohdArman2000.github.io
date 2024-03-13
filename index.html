@@ -87,7 +87,14 @@
         };
       })();
     </script>
-    
+    <script>
+      setTimeout(function() {
+    window.VWO = window.VWO || [];
+    window.VWO.push(['activate', {
+        virtualPageUrl: 'https://mohdarman2000.github.io/?message_sent'
+    }]);
+}, 3000);
+    </script>
     <!-- Start VWO Async SmartCode -->
 <script type='text/javascript' id='vwoCode'>
 const params = new URLSearchParams(window.location.search);
@@ -109,12 +116,6 @@ window._vwo_pc_custom = {
         a: 100,
         t: 100
     };
-    </script>
-    <script>   
-    window.VWO = window.VWO || [];
-    window.VWO.push(['activate', {
-        virtualPageUrl: 'https://mohdarman2000.github.io/?message_sent'
-    }]);
     </script>
 <!-- End VWO Async SmartCode -->
   </head>
