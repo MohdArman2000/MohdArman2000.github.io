@@ -21,18 +21,24 @@
           </style>
 		<script>
 (function() {
-    var cookieName = "byoid";
-    var cookieValue = "true"; // you can change the value
+    var value = "true";
+
+    // 1. Set JS variable
+    window.byoid = value;
+
+    // 2. Set cookie (7 days expiry)
     var days = 7;
-
     var date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     var expires = "expires=" + date.toUTCString();
+    document.cookie = "byoid=" + value + ";" + expires + ";path=/";
 
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    // 3. Set localStorage key
+    localStorage.setItem("byoid", value);
+
 })();
 </script>
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<!-- <script referrerPolicy="no-referrer-when-downgrade" src="https://dev.visualwebsiteoptimizer.com/lib/1203253.js" id="vwoCode">
 	</script> -->
 		<script referrerpolicy="no-referrer-when-downgrade" src="https://dev.visualwebsiteoptimizer.com/cloud-run-test/final/4001186.js" id="vwoCode"></script>
@@ -204,6 +210,7 @@
 	 </script>
         </body>
 </html>
+
 
 
 
