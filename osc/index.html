@@ -21,20 +21,19 @@
           </style>
 		<script>
 (function() {
-    var value = "true";
 
     // 1. Set JS variable
-    window.byoid = value;
+    window.byoid_js = 100;
 
-    // 2. Set cookie (7 days expiry)
+    // 2. Set Cookie (7 days expiry)
     var days = 7;
     var date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     var expires = "expires=" + date.toUTCString();
-    document.cookie = "byoid=" + value + ";" + expires + ";path=/";
+    document.cookie = "byoid_cookie=COOKIE123;" + expires + ";path=/";
 
-    // 3. Set localStorage key
-    localStorage.setItem("byoid", value);
+    // 3. Set Local Storage
+    localStorage.setItem("byoid_localstorage", "LOCAL456");
 
 })();
 </script>
@@ -210,6 +209,7 @@
 	 </script>
         </body>
 </html>
+
 
 
 
